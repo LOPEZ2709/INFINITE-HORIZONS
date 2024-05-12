@@ -19,3 +19,58 @@
     background-position: center; 
     background-repeat: no-repeat;
 }
+.perfil{
+    flex: 1;
+}
+.perfil:hover{
+    transform: scale(1.1);
+    transition: 0.1s;
+}
+.logo{
+    flex:1;
+}
+.logo:hover{
+    transform: scale(1.1);
+    transition: 0.1s;
+}
+.navbar-nav .nav-link {
+    position: relative;
+    color: black; /* Cambia el color del texto */
+    text-decoration: none;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+    transition: color 0.3s; /* Transición para el cambio de color del texto */
+}
+
+.navbar-nav .nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Distancia entre el texto y el subrayado */
+    left: 0;
+    width: 0; /* Ancho inicial del subrayado */
+    height: 2px; /* Grosor del subrayado */
+    background-color: black; /* Color del subrayado */
+    transition: width 0.3s; /* Transición para el ancho del subrayado */
+}
+
+.navbar-nav .nav-link:hover::before {
+    width: 100%; /* Ancho completo al pasar el ratón */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #00eeff; /* Cambia el color del texto al pasar el ratón */
+}
+.form-control{
+    box-shadow: 0.3s;
+}
+.form-control:focus{
+    box-shadow: 0 0 10px 5px #b7d4d6b2;
+    outline: none;
+}
+.form-control:focus::placeholder {
+    color: transparent; /* Oculta el texto del marcador de posición cuando está enfocado */
+}
+
+.form-control::placeholder {
+    transition: color 0.3s; /* Transición para el color del marcador de posición */
+}
