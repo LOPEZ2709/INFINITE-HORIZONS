@@ -12,9 +12,10 @@
     gap: 20px;
 }
 .backround{
+    height: 900px;
     margin: 0;
     padding: 0;
-    background-image: url('fondo.jpg');
+    background-image: url('kri.jpg');
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat;
@@ -37,7 +38,7 @@
     position: relative;
     color: black; /* Cambia el color del texto */
     text-decoration: none;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     font-size: 30px;
     transition: color 0.3s; /* Transición para el cambio de color del texto */
 }
@@ -58,7 +59,7 @@
 }
 
 .navbar-nav .nav-link:hover {
-    color: #00eeff; /* Cambia el color del texto al pasar el ratón */
+    color: #557e4b; /* Cambia el color del texto al pasar el ratón */
 }
 .form-control{
     box-shadow: 0.3s;
