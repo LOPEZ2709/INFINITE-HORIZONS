@@ -1,77 +1,106 @@
-.card{
+.card {
     flex: 1;
-    margin-top: 50px;
+    margin-top: 5px;
+    margin-left: 40%;
 }
-.card:hover{
+
+.card:hover {
     transform: scale(1.1);
     transition: 0.1s;
 }
-.container{
+
+.container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
 }
-.backround{
-    height: 900px;
+
+.backround {
+    height: cover;
     margin: 0;
     padding: 0;
     background-image: url('kri.jpg');
-    background-size: cover; 
-    background-position: center; 
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
 }
-.perfil{
+
+.perfil {
     flex: 1;
 }
-.perfil:hover{
+
+.perfil:hover {
     transform: scale(1.1);
     transition: 0.1s;
 }
-.logo{
-    flex:1;
+
+.logo {
+    flex: 1;
 }
-.logo:hover{
+
+.logo:hover {
     transform: scale(1.1);
     transition: 0.1s;
 }
+
 .navbar-nav .nav-link {
     position: relative;
-    color: black; /* Cambia el color del texto */
+    color: black;
     text-decoration: none;
     font-family: 'Times New Roman', Times, serif;
     font-size: 30px;
-    transition: color 0.3s; /* Transición para el cambio de color del texto */
+    transition: color 0.3s;
 }
 
 .navbar-nav .nav-link::before {
     content: '';
     position: absolute;
-    bottom: -2px; /* Distancia entre el texto y el subrayado */
+    bottom: -2px;
     left: 0;
-    width: 0; /* Ancho inicial del subrayado */
-    height: 2px; /* Grosor del subrayado */
-    background-color: black; /* Color del subrayado */
-    transition: width 0.3s; /* Transición para el ancho del subrayado */
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.3s;
 }
 
 .navbar-nav .nav-link:hover::before {
-    width: 100%; /* Ancho completo al pasar el ratón */
+    width: 100%;
 }
 
 .navbar-nav .nav-link:hover {
-    color: #557e4b; /* Cambia el color del texto al pasar el ratón */
+    color: #557e4b;
 }
-.form-control{
+
+.form-control {
     box-shadow: 0.3s;
 }
-.form-control:focus{
+
+.form-control:focus {
     box-shadow: 0 0 10px 5px #b7d4d6b2;
     outline: none;
 }
+
 .form-control:focus::placeholder {
-    color: transparent; /* Oculta el texto del marcador de posición cuando está enfocado */
+    color: transparent;
 }
 
 .form-control::placeholder {
-    transition: color 0.3s; /* Transición para el color del marcador de posición */
+    transition: color 0.3s;
+}
+
+.publicidad {
+    position: relative;
+    z-index: 1;
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 1000;
 }
