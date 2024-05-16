@@ -1,18 +1,25 @@
-.card {
-    flex: 1;
-    margin-top: 5px;
-    position: center;
+.nav-container {
+    position: relative;
+    z-index: 10;
+    width: 100%;
 }
 
-.card:hover {
-    transform: scale(1.1);
-    transition: 0.1s;
+.navbar1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20; /* Ensures navbar1 is above navbar */
+    transition: top 0.3s;
 }
 
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+.navbar {
+    position: fixed;
+    top: 70px; /* Adjust this value according to the height of navbar1 */
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    transition: top 0.3s;
 }
 
 .backround {
@@ -70,7 +77,6 @@
 .navbar-nav .nav-link:hover {
     color: #557e4b;
 }
-
 .form-control {
     box-shadow: 0.3s;
 }
@@ -93,14 +99,23 @@
     z-index: 1;
     background-color: white;
     padding: 20px;
-    margin: 20px;
+    margin: 10px;
 }
 
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: white;
-    z-index: 10;
+.card {
+    flex: 1;
+    margin-top: 70px;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    transition: 0.1s;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
 }

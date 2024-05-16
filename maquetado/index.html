@@ -13,81 +13,46 @@
   <title>inicio-infnity horizons</title>
 </head>
 
-<nav class="navbar1 navbar-expand-lg" style="background-color: white;">
-  <center>
-    <a class="navbar-brand" href="index.html">
-      <img class="logo" src="logo.png" width="100px" style="margin-top: 1%;" />
-    </a>
-  </center>
-</nav>
-<br>
-<nav class="navbar navbar-expand-lg" style="background-color:white;">
-  <div class="container-fluid">
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin-left: 1%;">
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="boutus.html">Sobre
-            Nosotros</a>
-        </li>
-      </ul>
-      <form class="d-flex" role="search" style="margin-right: 30%">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="width: 400px" />
-        <button class="btn btn-outline-success" type="submit" style="color: rgb(0, 0, 0);">Buscar</button>
-      </form>
-    </div>
-    <a href="perfil.html" style="text-decoration: none; color: black;">
-      LOPEZby2006
-      <img class="perfil" src="perfil.jpg" width="50px" height="50px" style="border-radius: 120%; margin-left: 20px;"
-        alt="Perfil del usuario">
-    </a>
-  </div>
-</nav>
-<style>
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-
-  .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 600px;
-  }
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
-</style>
-
 <body class="backround">
-  <div class="container">
+  <div class="nav-container">
+    <nav class="navbar1 navbar-expand-lg" style="background-color: white;">
+      <center>
+        <a class="navbar-brand" href="index.html">
+          <img class="logo" src="logo.png" width="100px" style="margin-top: 1%;" />
+        </a>
+      </center>
+    </nav>
+    <nav class="navbar navbar-expand-lg" style="background-color:white;">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin-left: 1%;">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="boutus.html">Sobre
+                Nosotros</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search" style="margin-right: 30%">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+              style="width: 400px" />
+            <button class="btn btn-outline-success" type="submit" style="color: rgb(0, 0, 0);">Buscar</button>
+          </form>
+        </div>
+        <a href="perfil.html" style="text-decoration: none; color: black;">
+          LOPEZby2006
+          <img class="perfil" src="perfil.jpg" width="50px" height="50px"
+            style="border-radius: 120%; margin-left: 20px;" alt="Perfil del usuario">
+        </a>
+      </div>
+    </nav>
+  </div>
+  <div class="container mt-5 pt-5">
     <a href="hoteleria.html" style="text-decoration: none">
       <div class="card" style="width: 16rem">
         <img src="hotel.jpg" style="height: 160px;" class="card-img-top" alt="hotel en la playa" />
@@ -136,7 +101,7 @@
   <br>
   <center>
     <div class="publicidad" style="border-radius: 5px;">
-      <h1 style="font-family: 'Courier New', Courier, monospace  ;">CONTENIDO DE PAGINA</h1>
+      <h1 style="font-family: 'Courier New', Courier, monospace;">CONTENIDO DE PAGINA</h1>
       <div class="card" style="width: 18rem;">
         <img src="candelaria.jpg" class="card-img-top" alt="candelaria por la tarde">
         <div class="card-body">
@@ -152,10 +117,29 @@
                   <h5 class="modal-title">Modal title</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
   </center>
+
+  <script>
+    let prevScrollpos = window.pageYOffset;
+    window.onscroll = function () {
+      let currentScrollPos = window.pageYOffset;
+      const navbar1 = document.querySelector('.navbar1');
+      const navbar2 = document.querySelector('.navbar');
+
+      if (prevScrollpos > currentScrollPos) {
+        navbar1.style.top = "0";
+        navbar2.style.top = "70px"; // Adjust this value according to the height of navbar1
+      } else {
+        navbar1.style.top = "-80px"; // Adjust this value based on navbar1's height
+        navbar2.style.top = "0";
+      }
+      prevScrollpos = currentScrollPos;
+    }
+  </script>
 </body>
 
 </html>
