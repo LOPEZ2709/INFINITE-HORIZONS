@@ -9,17 +9,18 @@
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 20; /* Ensures navbar1 is above navbar */
-    transition: top 0.3s;
+    z-index: 20;
+    transition: top 0.2s;
 }
 
 .navbar {
     position: fixed;
-    top: 70px; /* Adjust this value according to the height of navbar1 */
+    top: 70px;
+    /* Adjust this value according to the height of navbar1 */
     left: 0;
     width: 100%;
     z-index: 10;
-    transition: top 0.3s;
+    transition: top 0.2s;
 }
 
 .backround {
@@ -77,6 +78,7 @@
 .navbar-nav .nav-link:hover {
     color: #557e4b;
 }
+
 .form-control {
     box-shadow: 0.3s;
 }
@@ -119,6 +121,84 @@
     align-items: center;
     justify-content: center;
 }
-.container{
-    
+
+.carousel-item {
+    height: 100vh;
+    min-height: 300px;
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+}
+
+html {
+    height: 100%;
+    margin: 0;
+}
+
+.carousel-inner::after {
+    content: "";
+    display: block;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.329);
+    /* Para un efecto de superposición oscura */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.carousel-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.btn-secondary {
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.dropdown-menu {
+    transform: translateX(-100%);
+    left: auto;
+    right: 0;
+}
+.dropdown-toggle::after {
+    display: none;
+}
+.btn-secondary,
+.btn-secondary:focus,
+.btn-secondary:hover,
+.btn-secondary:active {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+.dropdown-menu {
+    transform: translateX(-100%); /* Despliega el menú hacia la izquierda */
+    left: auto;
+    right: 0;
+}
+.publihotel{
+    position: relative;
+    z-index: 1;
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
 }
