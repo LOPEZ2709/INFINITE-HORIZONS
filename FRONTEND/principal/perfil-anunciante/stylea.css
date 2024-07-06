@@ -1,48 +1,125 @@
-.bg{
-    height: cover;
-    margin: 0;
-    padding: 0;
-    background-image: url('Bogta.-Calle-60.jpeg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+.bg {
+  height: cover;
+  margin: 0;
+  padding: 0;
+  background-image: url("Bogta.-Calle-60.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .profile-container {
-    width: 80%;
-    margin: 20px auto;
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  margin: 20px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .profile-header {
-    display: block;
-    align-items: center;
-    margin-bottom: 20px;
+  display: block;
+  align-items: center;
+  margin-bottom: 20px;
 }
 .profile-header img {
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    margin-right: 20px;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
 }
 .profile-header h1 {
-    margin: 0;
+  margin: 0;
 }
 .profile-section {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 .profile-section h2 {
-    margin-bottom: 10px;
-    color: #333;
+  margin-bottom: 10px;
+  color: #333;
 }
-.contact-info, .business-info, .stats, .testimonials, .preferences, .puntuacion {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background: #fafafa;
+.contact-info,
+.business-info,
+.stats,
+.testimonials,
+.preferences,
+.puntuacion {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: #fafafa;
 }
 .chart-container {
-    width: 80%;
-    max-width: 800px;
+  width: 80%;
+  max-width: 800px;
+}
+.textos {
+  margin: 20px 0;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #007bff;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+.textos:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+.form-container {
+  max-width: 600px;
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.form-group {
+  margin-bottom: 15px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.form-group input[type="file"] {
+  border: none;
+}
+.form-group button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.form-group button:hover {
+  background-color: #0056b3;
+}
+.drop-zone {
+  border: 2px dashed #007bff;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+  color: #007bff;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+.drop-zone.dragover {
+  background-color: #e0e0e0;
 }

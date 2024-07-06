@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Publicar Sitio Turístico</title>
+        <link rel="stylesheet" href="stylea.css">
+    </head>
+    <body>
+        <div class="form-container">
+            <h2>Publicar Sitio Turístico</h2>
+            <form id="publish-form">
+                <div class="form-group">
+                    <label for="name">Nombre del Sitio</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="location">Ubicación</label>
+                    <input type="text" id="location" name="location" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Descripción</label>
+                    <textarea id="description" name="description" rows="5"
+                        required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="website">Sitio Web</label>
+                    <input type="url" id="website" name="website">
+                </div>
+                <div class="form-group">
+                    <label for="file-input">Imágenes del Sitio</label>
+                    <input type="file" id="file-input" name="images"
+                        accept="image/*" multiple required>
+                    <div class="drop-zone" id="drop-zone">
+                        Arrastra y suelta tus imágenes aquí
+                    </div>
+                    <div id="preview"></div>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Publicar</button>
+                </div>
+                <center>
+                    <div>
+                        <a class="textos" href="sitios.html">cancelar y
+                            volver</a>
+                    </div>
+                </center>
+            </form>
+        </div>
+
+        <script>
+        const fileInput = document.getElementById('file-input');
+        const dropZone = document.getElementById('drop-zone');
+        const preview = document.getElementById('preview');
+        const form = document.getElementById('publish-form');
+
+        // Evento para abrir el diálogo de selección de archivos
+        fileInput.addEventListener('change', handleFiles);
+
+        // Eventos de arrastrar y soltar
+        dropZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropZone.classList.add('dragover');
+        });
+
+        dropZone.addEventListener('dragleave', () => {
+            dropZone.classList.remove('dragover');
+        });
+
+        dropZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropZone.classList.remove('dragover');
+            const files = e.dataTransfer.files;
+            handleFiles({ target: { files } });
+        });
+
+        function handleFiles(event) {
+            const files = event.target.files;
+            preview.innerHTML = '';
+
+            for (const file of files) {
+                const fileReader = new FileReader();
+
+                fileReader.readAsDataURL(file);
+                fileReader.onload = function(e) {
+                    const img = document.createElement('img');
+                    img.src = e.target.result;
+                    img.width = 100;
+                    preview.appendChild(img);
+                };
+            }
+        }
+
+        // Manejo del envío del formulario
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Sitio turístico publicado con éxito');
+        });
+    </script>
+    </body>
+</html>
