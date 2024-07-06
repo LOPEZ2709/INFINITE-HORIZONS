@@ -1,0 +1,48 @@
+.bg{
+    height: cover;
+    margin: 0;
+    padding: 0;
+    background-image: url('Bogta.-Calle-60.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.profile-container {
+    width: 80%;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.profile-header {
+    display: block;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.profile-header img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
+.profile-header h1 {
+    margin: 0;
+}
+.profile-section {
+    margin-bottom: 20px;
+}
+.profile-section h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+.contact-info, .business-info, .stats, .testimonials, .preferences, .puntuacion {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #fafafa;
+}
+.chart-container {
+    width: 80%;
+    max-width: 800px;
+}
