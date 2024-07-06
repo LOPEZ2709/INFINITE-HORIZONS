@@ -123,3 +123,57 @@ body {
 .drop-zone.dragover {
   background-color: #e0e0e0;
 }
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+.profile-container {
+  width: 80%;
+  margin: 20px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.profile-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.profile-header img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+}
+.profile-header h1 {
+  margin: 0;
+}
+.profile-section {
+  margin-bottom: 20px;
+}
+.profile-section h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+.contact-info, .business-info, .stats, .testimonials, .preferences {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: #fafafa;
+}
+.textos1{
+  margin-left: 694px;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #007bff;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+.textos1:hover{
+  background-color: #007bff;
+  color: #fff;
+}
