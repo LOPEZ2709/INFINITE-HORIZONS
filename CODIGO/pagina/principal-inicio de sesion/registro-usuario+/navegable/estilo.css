@@ -1,0 +1,135 @@
+
+title {
+    background-color: red;
+}
+button{
+    width: 100px;
+    height: 20px;
+    border-radius: 15px;
+    color: rgb(0, 0, 0);
+    border-color:rgb(0, 0, 0);
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 5px;
+    transition: all 0.3s ease ;
+    cursor: pointer;
+}
+
+button:hover{
+    box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,0.6);
+    background-color:rgb(136, 210, 154);
+    color: rgb(0, 0, 0);
+    transform: scale(1.1);
+}
+
+
+
+table{
+    border: 2px  rgb(0, 0, 0);
+    margin-left: 10px;
+    margin-right: 10px;
+
+    
+}
+
+button.registrar{
+    color: rgb(0, 0, 0);
+    border-color: rgb(0, 0, 0);
+    margin-left: 220px;
+
+}
+
+table,tr{
+    border: 1px solid rgb(14, 50, 7);
+    width:1200px;
+    height: 30px;
+    
+}
+
+.container{
+    width: 400px;
+    margin: 0 auto;
+
+}
+
+
+img{
+    width: 150px;
+    height: 100px;
+    object-fit: cover; 
+    transition: all 0.3s;
+    cursor: pointer;
+
+}
+
+.img:hover{
+    transform: scale(1.2);
+
+}
+
+
+section {
+    transition: all 0.3s ease ;
+    background-color: rgb(208, 236, 215);
+    margin: 1rem 0;
+    border-radius: 1rem;
+    padding: 0.25rem 0;
+    cursor: pointer;
+    margin-bottom: 50px;
+}
+
+section:hover{
+    box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,0.6);
+
+}
+
+input{
+    margin-left: 5px;
+    margin-top: 20px;
+}
+
+label{
+    margin-left: 15px;
+    margin-top: 20px;
+}
+
+.fondo{
+    margin-left: 90px;
+
+}
+h1 .fondo{
+    margin-top: 50px;
+}
+
+footer{
+    margin-top: 70px;
+    background-color: rgb(60, 60, 60);
+    padding: 3rem;
+    color: antiquewhite;
+    
+}
+
+footer div { 
+    float: right;
+}
+
+footer p{
+    margin: 0;
+}
+
+
+footer a{
+    transition: color 0.3s ease;
+    color: white;
+    text-decoration: none;
+
+}
+
+footer a:hover{
+    color: rgb(37, 120, 120);
+
+}
+
+select .Tdocumento{
+  
+}
