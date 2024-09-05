@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="INFINITE HORIZONS " company="" webLink="http://" view-date="2023-09-01" view-index="0" gantt-divider-location="309" resource-divider-location="300" version="3.2.3247" locale="es_CO">
+    <description/>
+    <view zooming-state="default:9" id="gantt-chart">
+        <field id="tpd3" name="Name" width="176" order="0"/>
+        <field id="tpd4" name="Begin date" width="66" order="1"/>
+        <field id="tpd5" name="End date" width="66" order="2"/>
+        <option id="filter.completedTasks" value="false"/>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Name" width="210" order="0"/>
+        <field id="1" name="Default role" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="46" name="PLANIFICACIÓN" color="#8cb6ce" meeting="false" start="2023-11-01" duration="188" complete="0" thirdDate="2024-01-16" thirdDate-constraint="0" expand="true">
+            <task id="47" name="Nombre proyecto" color="#8cb6ce" meeting="false" start="2024-02-09" duration="3" complete="0" thirdDate="2024-01-05" thirdDate-constraint="0" expand="true"/>
+            <task id="48" name="Objetivo general" color="#8cb6ce" meeting="false" start="2024-02-09" duration="3" complete="0" thirdDate="2024-01-05" thirdDate-constraint="0" expand="true"/>
+            <task id="49" name="Objetivos específicos" color="#8cb6ce" meeting="false" start="2024-02-09" duration="3" complete="0" thirdDate="2024-01-05" thirdDate-constraint="0" expand="true"/>
+            <task id="50" name="Alcance proyecto" color="#8cb6ce" meeting="false" start="2024-02-09" duration="3" complete="0" thirdDate="2024-01-05" thirdDate-constraint="0" expand="true"/>
+            <task id="51" name="Justificación" color="#8cb6ce" meeting="false" start="2024-02-09" duration="3" complete="0" thirdDate="2024-01-05" thirdDate-constraint="0" expand="true"/>
+            <task id="52" name="Recolección de información" color="#8cb6ce" meeting="false" start="2024-03-18" duration="3" complete="0" thirdDate="2024-01-05" thirdDate-constraint="0" expand="true"/>
+            <task id="53" name="Formatos de requerimietos IEEE-830" color="#8cb6ce" meeting="false" start="2024-02-21" duration="75" complete="0" thirdDate="2024-01-05" thirdDate-constraint="0" expand="true"/>
+            <task id="57" name="DISEÑO" color="#8cb6ce" meeting="false" start="2023-11-01" duration="188" complete="0" thirdDate="2024-01-23" thirdDate-constraint="0" expand="true">
+                <task id="58" name="BPMN" color="#8cb6ce" meeting="false" start="2024-02-12" duration="28" complete="0" thirdDate="2024-01-23" thirdDate-constraint="0" expand="true"/>
+                <task id="59" name="Mockups" color="#8cb6ce" meeting="false" start="2024-04-29" duration="60" complete="0" thirdDate="2024-01-23" thirdDate-constraint="0" expand="true"/>
+                <task id="60" name="Caso de uso" color="#8cb6ce" meeting="false" start="2024-04-29" duration="4" complete="0" thirdDate="2024-01-23" thirdDate-constraint="0" expand="true"/>
+                <task id="61" name="Modelo entidad relación" color="#8cb6ce" meeting="false" start="2024-03-11" duration="10" complete="0" thirdDate="2024-01-17" thirdDate-constraint="0" expand="true"/>
+                <task id="62" name="Modelo relacional" meeting="false" start="2023-11-01" duration="1" complete="0" expand="true"/>
+            </task>
+        </task>
+    </tasks>
+    <resources/>
+    <allocations/>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+    <roles roleset-name="SoftwareDevelopment"/>
+    <roles>
+        <role id="1" name=""/>
+        <role id="2" name="BELTRÁN PEÑA KEVIN LEONARDO (Project manager, programador  y analista)"/>
+        <role id="3" name="FLOREZ GUARNIZO ALEJANDRA (Analista y programadora)"/>
+        <role id="4" name="LÓPEZ MELO DIEGO ESTEBAN (Programador, diseñador y analista)"/>
+        <role id="5" name="RESTREPO MORENO KRISTIN VANESSA (Diseñadora y analista)"/>
+    </roles>
+</project>
