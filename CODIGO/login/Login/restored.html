@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styleres.css">
+    <title>recuperacion</title>
+</head>
+
+<body>
+    <center>
+        <div class="container">
+            <select id="myDropdown">
+                <option value="">Seleccione su tipo de Documento</option>
+                <option value="Registro civil">Registro civil</option>
+                <option value="Tarjeta de identidad">Tarjeta de identidad</option>
+                <option value="Cédula de ciudadanía">Cédula de ciudadanía</option>
+                <option value="Tarjeta de extranjería">Tarjeta de extranjería</option>
+                <option value="Cédula de extranjería">Cédula de extranjería</option>
+                <option value="Número de identificación tributaria">Número de identificación tributaria</option>
+                <option value="Pasaporte">Pasaporte</option>
+                <option value="Permiso especial de permanencia">Permiso especial de permanencia</option>
+                <option value="Documento de identificación extranjero">Documento de identificación extranjero</option>
+                <option value="NUIP">NUIP</option>
+                <option value="NIT de otro país">NIT de otro país</option>
+            </select>
+            <br>
+            <label for="documento" style="color: white;">Documento</label>
+            <br>
+            <input type="text" id="documento">
+            <br>
+            <br>
+            <label for="email" style="color: white;">correo</label>
+            <br>
+            <input type="text" id="correo">
+            <br>
+            <br>
+            <button class="button">enviar</button>    
+        </div>
+    </center>
+</body>
+<script>
+    // Get the dropdown menu and toolbar elements
+    const dropdown = document.getElementById('myDropdown');
+    const toolbar = document.getElementById('toolbar');
+    const selectedOptionSpan = document.getElementById('selected-option');
+
+    // Add an event listener to the dropdown menu
+    dropdown.addEventListener('change', () => {
+        // Get the selected option value
+        const selectedOption = dropdown.value;
+
+        // Display the selected option in the toolbar
+        selectedOptionSpan.textContent = selectedOption;
+    });
+</script>
+
+</html>

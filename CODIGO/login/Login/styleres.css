@@ -1,0 +1,25 @@
+#toolbar {
+  background-color: #f0f0f0;
+  padding: 12px;
+  border-bottom: 1px solid #ccc;
+}
+
+#myDropdown {
+  width: 150px;
+  height: 30px;
+  margin: 100px;
+  padding: 4px;
+  border: 1px solid #ccc;
+}
+
+.container {
+  padding: 5%;
+  background-image: url(img2.jpg);
+  image-rendering: auto;
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 1%;
+}
