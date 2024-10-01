@@ -1,0 +1,132 @@
+@import url(https://fonts.googleapis.com/css2?family=Archivo+Black&family=Questrial&display=swap);
+
+/* Estilos generales */
+body {
+    background-image: url(../../imagenes/paisaje5.jpeg);
+    backdrop-filter: blur(8px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Questrial", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Contenedor del registro */
+.register-container {
+    width: 100%;
+    max-width: 400px; /* Ancho reducido para hacerlo más compacto */
+    background: rgba(255, 255, 255, 0.95);
+    padding: 15px; /* Relleno ajustado */
+    border-radius: 15px; /* Esquinas más sutiles */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Enlace Volver */
+.volver {
+    color: white;
+    font-size: 1rem; 
+    padding: 8px 16px; 
+    border-radius: 50px;
+    background-color: #004cff;
+    border: none;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 8px rgba(0, 76, 255, 0.2);
+}
+
+.volver:hover {
+    background-color: #06182c;
+    transform: translateY(-2px);
+}
+
+/* Título del registro */
+.register-title {
+    font-size: 1.5rem; 
+    color: #222d75;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+}
+
+/* Estilos del formulario */
+.form-control {
+    border-radius: 50px;
+    padding: 8px 12px; 
+    font-size: 0.9rem; 
+    margin-bottom: 15px; 
+    border: 2px solid transparent;
+    background-color: rgba(249, 249, 249, 0.9);
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #004cff;
+    box-shadow: 0 0 8px rgba(0, 174, 255, 0.5);
+    outline: none;
+}
+
+/* Botón personalizado */
+.btn-primary {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem; 
+    padding: 10px 20px; 
+    border-radius: 50px;
+    background-color: #004cff;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 100%;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(57, 60, 62, 0.2);
+}
+
+.btn-primary:hover {
+    background-color: #06182c;
+    transform: translateY(-2px);
+}
+
+/* Añadir estado de carga */
+.btn-primary.loading {
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .register-container {
+        max-width: 90%; /* Ajuste de ancho para pantallas medianas */
+        padding: 15px; 
+    }
+
+    .register-title {
+        font-size: 1.4rem; /* Tamaño ajustado */
+    }
+
+    .btn-primary {
+        padding: 10px; /* Relleno más pequeño en botón */
+    }
+}
+
+@media (max-width: 576px) {
+    .register-container {
+        padding: 10px; /* Relleno más pequeño para móviles */
+    }
+
+    .register-title {
+        font-size: 1.2rem; /* Tamaño de título más pequeño en móviles */
+    }
+
+    .form-control {
+        padding: 6px; /* Menos relleno en campos de entrada */
+    }
+
+    .btn-primary {
+        font-size: 0.9rem; /* Tamaño de botón más pequeño */
+    }
+}
