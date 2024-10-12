@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css"> 
+    <title>Cálculo de Comisión</title>
+   
+</head>
+<body>
+    <form>
+        <h1>Cálculo de Comisión</h1>
+        <div class="input-group">
+            <label for="nombre">Nombre del Empleado:</label>
+            <input type="text" id="nombre" placeholder="Ingrese su nombre" required>
+        </div>
+        
+        <div class="input-group">
+            <label for="ventas">Ingrese el monto de ventas:</label>
+            <input type="number" id="ventas" placeholder="Monto de ventas" required>
+        </div>
+
+        <button type="button" class="btn" onclick="calcularComision()">Calcular</button>
+        
+        <p id="resultado"></p>
+    </form>
+
+    <script>
+        function calcularComision() {
+            const ventas = parseInt(document.getElementById("ventas").value);
+            let comision = 0;
+
+            
+            switch (ventas) {
+                case 3000000:
+                    comision = ventas * 0.05;
+                    break;
+                case 4000000:
+                    comision = ventas * 0.06;
+                    break;
+                case 5000000:
+                    comision = ventas * 0.075;
+                    break;
+                case 7000000: 
+                    comision = ventas * 0.08;
+                    break;
+                case 9000000:
+                    comision = ventas * 0.09;
+                    break;
+                case 10000000:
+                    comision = ventas * 0.10;
+                    break;
+                default:
+                    alert("Monto de ventas no válido, por favor ingrese uno de los valores permitidos.");
+                    return;
+            }
+
+          
+            document.getElementById("resultado").innerText = `La comisión del empleado es: $${comision.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>

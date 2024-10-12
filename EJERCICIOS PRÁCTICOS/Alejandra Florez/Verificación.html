@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- SweetAlert incluido -->
+</head>
+<body>
+    <script>
+
+        const usuarioCorrecto = "sena2024";
+        const contraseñaCorrecta = "12345";
+
+        let intentosContraseña = 0;
+        let maxIntentosContraseña = 3;  // Número de intentos permitidos solo para la contraseña
+        let usuarioValido = false;
+
+        // Ciclo que solicita el nombre de usuario hasta que sea correcto
+        while (!usuarioValido) {
+            let usuario = window.prompt("Ingrese su cuenta de usuario: ");
+
+            // Verificar si el usuario es correcto
+            if (usuario === usuarioCorrecto) {
+                usuarioValido = true; // Solo si el usuario es correcto, continúa con la contraseña
+            } else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Usuario incorrecto',
+                    text: 'Por favor, ingrese un usuario válido.',
+                });
+            }
+        }
+
+        // Ciclo para la verificación de la contraseña (con límite de intentos)
+        while (intentosContraseña < maxIntentosContraseña && usuarioValido) {
+            let contraseña = window.prompt("Ingrese su contraseña: ");
+
+            if (contraseña === contraseñaCorrecta) {
+                Swal.fire({
+                    title: "Ingreso exitoso. Bienvenido SENA2024!",
+                    text: "Has ingresado correctamente.",
+                    icon: "success"
+                });
+                break; // Salir del bucle si la contraseña es correcta
+            } else {
+                intentosContraseña++;
+
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Contraseña incorrecta',
+                    text: 'Intento ' + intentosContraseña + ' de ' + maxIntentosContraseña,
+                });
+
+                // Verificar si se han agotado los intentos de la contraseña
+                if (intentosContraseña === maxIntentosContraseña) {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Cuenta bloqueada',
+                        text: 'Ha superado el número de intentos permitidos para la contraseña',
+                    });
+                    break;
+                }
+            }
+        }
+
+    </script>
+    
+</body>
+</html>
+
+    
+</body>
+</html>
