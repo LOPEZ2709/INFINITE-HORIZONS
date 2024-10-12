@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+
+    <script>
+
+        function validar(){
+            var nom=document.getElementById("name");
+            var ape=document.getElementById("apellido");
+            var em=document.getElementById("email");
+            var cont=document.getElementById("contraseña");
+
+            if(nom.value== null || nom.value==""){
+                Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Nombre Obligatorio!",
+               
+                });
+
+                return false;
+
+            }else if(ape.value== null || ape.value==""){
+                Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Apellido Obligatorio!",
+               
+                });
+
+                return false;
+            } else if (em.value == null || em.value == "") {
+                Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "Email requerido"
+                });
+                return false;
+            } else if (cont.value.length === 0 || cont.value.length > 5) {
+                Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "Contraseña con demasiados caracteres"
+                });
+                return false;
+            } else {
+                Swal.fire({
+                    icon: "success",
+                    title: "Éxito!",
+                    text: "Datos Correctos",
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        document.getElementById("form").submit();
+                    }
+                });
+                return false;
+            }
+        }
+
+                
+            
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+
+<form id="form" action="" onsubmit="return validar()">
+
+    <h3>Bienvenido</h3>
+
+    <div class="input-group">
+
+        <label for="name">Nombre</label>
+        <input type="text" name="name" id="name" placeholder="Nombre">
+
+        <label for="apellido">Apellido</label>
+        <input type="text" name="apellido" id="apellido" placeholder="Apellido">
+
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email" placeholder="email">
+
+        <label for="contraseña">Contraseña</label>
+        <input type="password" name="contraseña" id="contraseña" placeholder="contraseña">
+
+        <div class="form-txt">
+            <a href="#">Politicas de privacidad</a>
+            <a href="#">Terminos y condiciones</a>
+        </div>
+
+        <input class="btn" type="submit" value="Enviar">
+
+
+
+
+
+    </div>
+</form>
+
+
+</html>
