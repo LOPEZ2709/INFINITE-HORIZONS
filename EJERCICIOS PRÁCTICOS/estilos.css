@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh; /* Altura mínima de la ventana */
+    display: flex; /* Flexbox para centrar */
+    align-items: center; /* Alinear verticalmente */
+    justify-content: center; /* Alinear horizontalmente */
+    background-color: #f0f2f5; /* Fondo claro */
+}
+
+form {
+    padding: 50px 55px; /* Espaciado interno */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Sombra */
+    border-radius: 0px; /* Bordes sin redondear */
+    text-align: center; /* Centrar texto */
+    width: 340px; /* Ancho del formulario */
+    background-color: #ffffff; /* Fondo blanco */
+}
+
+.input-group {
+    display: flex; /* Usar flexbox */
+    flex-direction: column; /* Columna */
+    text-align: left; /* Texto a la izquierda */
+}
+
+h1 {
+    color: #283629; /* Color del título */
+    font-size: 24px; /* Tamaño del título */
+    font-weight: 600; /* Peso de la fuente */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+label {
+    font-size: 14px; /* Tamaño de la fuente para etiquetas */
+    color: #555; /* Color de las etiquetas */
+    margin-bottom: 8px; /* Espaciado inferior */
+}
+
+input[type="text"],
+input[type="number"] {
+    padding: 17px 25px; /* Relleno interno */
+    border-radius: 25px; /* Bordes redondeados */
+    margin-bottom: 20px; /* Espaciado inferior */
+    background-color: #EDFFF0; /* Fondo suave */
+    border: 2px solid #F0FAF1; /* Borde */
+    color: #283629; /* Color del texto */
+}
+
+input::placeholder {
+    color: #b5cab6; /* Color del texto de marcador de posición */
+}
+
+.btn {
+    font-size: 16px; /* Tamaño de la fuente */
+    color: #FFFF; /* Color del texto */
+    border: 0; /* Sin borde */
+    border-radius: 25px; /* Bordes redondeados */
+    background-color: #489c45; /* Color de fondo */
+    padding: 10px; /* Espaciado interno */
+    cursor: pointer; /* Cambiar cursor a puntero */
+}
+
+.btn:hover {
+    background-color: #50E04B; /* Color de fondo al pasar el ratón */
+}
+
+#resultado {
+    margin-top: 20px; /* Espaciado superior */
+    font-weight: bold; /* Negrita */
+    color: #000000; /* Color azul para el resultado */
+}
+
+@media (max-width: 991px) {
+    body {
+        padding: 30px; /* Espaciado interno en pantallas pequeñas */
+    }
+
+    form {
+        padding: 50px 30px; /* Ajustar espaciado interno */
+        width: 100%; /* Ancho completo */
+    }
+
+    input {
+        padding: 15px; /* Relleno interno para entradas */
+    }
+}
