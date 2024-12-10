@@ -1,0 +1,74 @@
+/* Inicio de estilo del nav */
+nav.barra-lateral {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 65px;
+    background-color: #122465;
+    height: 100%;
+    overflow: hidden;
+    box-shadow: 0 20px 35px rgba(50, 50, 50, 0.3);
+    transition: width 0.4s;
+    z-index: 1000;
+}
+nav.barra-lateral:hover {
+    width: 240px; 
+}
+nav.barra-lateral ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 59px; 
+}
+nav.barra-lateral li {
+    padding: 5px;
+}
+nav.barra-lateral a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    transition: background-color 0.3s ease;
+    white-space: nowrap; 
+}
+nav.barra-lateral a:hover {
+    background-color: #4c5bff; 
+}
+nav.barra-lateral a .nav-item {
+    margin-left: 10px;
+    opacity: 0; 
+    transition: opacity 0.3s;
+}
+nav.barra-lateral:hover a .nav-item {
+    opacity: 1; 
+}
+nav.barra-lateral i {
+    font-size: 18px; 
+}
+/* Fin de estilo del nav */
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    padding: 10px 0;
+}
+.logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.logo span {
+    font-weight: bold;
+    padding-left: 15px;
+    font-size: 10px;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+nav.barra-lateral:hover .logo span {
+    opacity: 1; 
+}
