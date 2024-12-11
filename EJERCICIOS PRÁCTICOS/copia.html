@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matriz de Datos</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Buscar Dato en la Matriz Académica</h1>
+
+    <label for="fila">Ingrese el número de la fila (estudiante):</label>
+    <input type="number" id="fila" placeholder="Ej: 0" min="0">
+    <br><br>
+    <label for="columna">Ingrese el número de la columna (dato):</label>
+    <input type="number" id="columna" placeholder="Ej: 1" min="0" max="7">
+    <br><br>
+    <button onclick="buscarDato()">Buscar</button>
+
+    <h2>Resultado</h2>
+    <div id="resultado">
+        <!-- Aquí se mostrará el resultado -->
+    </div>
+
+    <script>
+        // Matriz de datos
+        const academico = [
+            ["51662369", "Sandra Milena Castellanos Marín", "Medicina", "VI", "3.5", "4.0", "3.3", "3.5"],
+            ["80223220", "Luis Andrés Montoya Montoya", "Ingeniería de Telecomunicaciones", "IV", "3.0", "3.3", "4.2", "4.5"],
+            ["79444555", "Francisco Martínez Marin", "Ingeniería de Alimentos", "III", "3.4", "4.5", "4.4", "3.0"],
+            ["79001003", "Luis Francisco Castañeda Roa", "Ingeniería de Sistemas", "VIII", "3.3", "3.4", "4.5", "4.4"],
+            ["79003003", "Pedro José Pineda Pineda", "Odontología", "VI", "4.0", "4.1", "3.9", "4.5"]
+            // Añade el resto de los registros aquí
+        ];
+
+        // Función para buscar un dato por la fila y columna indicadas
+        function buscarDato() {
+            // Obtener el número de fila y columna ingresados
+            const fila = document.getElementById('fila').value;
+            const columna = document.getElementById('columna').value;
+
+            // Obtener el resultado div donde se va a mostrar el dato
+            const resultadoDiv = document.getElementById('resultado');
+            resultadoDiv.innerHTML = ''; // Limpiar el resultado anterior
+
+            // Verificar si la fila y columna ingresadas son válidas
+            if (fila >= 0 && fila < academico.length && columna >= 0 && columna < academico[0].length) {
+                // Obtener el dato específico
+                const dato = academico[fila][columna];
+                resultadoDiv.textContent = `El dato en la posición [${fila}, ${columna}] es: ${dato}`;
+            } else {
+                resultadoDiv.textContent = 'Fila o columna fuera de los límites de la matriz.';
+            }
+        }
+    </script>
+</body>
+</html>
