@@ -12,19 +12,19 @@ include 'conectar.php';
 
 $id_administrador=$_POST['id_administrador'];
     $nombre=$_POST['nombre'];
-        $email=$_POST['email'];
-            $telefono=$_POST['telefono'];
-                $direccion=$_POST['direccion'];
-                    $constrase=$_POST['contrase'];
+        $telefono=$_POST['telefono'];
+            $direccion=$_POST['direccion'];
+                $edad=$_POST['edad'];
+                    $id_adm=$_POST['id_adm'];
 
-                    $insertar="INSERT INTO administrador VALUES('$id_administrador','$nombre','$email','$telefono','$direccion','$constrase')"
+                    $insertar="INSERT INTO cliente VALUES('$id_cliente','$nombre','$telefono','$direccion','$edad','$id_adm')"
 
                         $respuesta=mysqli_query($conexion,$insertar)
 or die("imposible nserar datos");
 
 mysqli_close($conexion);
 
-echo"Los datos de la tabla administrador se insertaron con exito"
+echo"Los datos de la tabla cliente se insertaron con exito"
 
 ?>
 
