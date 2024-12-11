@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matriz de Datos</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Buscar Estudiante por ID</h1>
+
+    <label for="id-estudiante">Ingrese el ID del estudiante:</label>
+    <input type="text" id="id-estudiante" placeholder="Ej: 51662369">
+    <button onclick="buscarEstudiante()">Buscar</button>
+    <button onclick="mostrarTodosEstudiantes()">Mostrar Todos</button>
+
+    <h2>Datos del Estudiante</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Programa</th>
+                <th>Semestre</th>
+                <th>Promedio 1</th>
+                <th>Promedio 2</th>
+                <th>Promedio 3</th>
+                <th>Promedio 4</th>
+            </tr>
+        </thead>
+        <tbody id="academico-body">
+           
+        </tbody>
+    </table>
+
+    <script>
+        const academico = [
+            ["51662369","Sandra Milena Castellanos Marín","Medicina","VI","3.5","4.0","3.3","3.5"],
+            ["80223220","Luis Andrés Montoya Montoya","Ingeniería de Telecomunicaciones","IV","3.0","3.3","4.2","4.5"],
+            // ... (continúa con el resto de los datos)
+        ];
+
+        function buscarEstudiante() {
+            const cuerpoTabla = document.getElementById('academico-body');
+            cuerpoTabla.innerHTML = '';
+
+            const idIngresado = document.getElementById('id-estudiante').value;
+            const estudiante = academico.find(est => est[0] === idIngresado);
+
+            if (estudiante) {
+                const fila = document.createElement('tr');
+                estudiante.forEach(dato => {
+                    const celda = document.createElement('td');
+                    celda.textContent = dato;
+                    fila.appendChild(celda);
+                });
+                cuerpoTabla.appendChild(fila);
+            } else {
+                const fila = document.createElement('tr');
+                const celda = document.createElement('td');
+                celda.textContent = "Estudiante no encontrado";
+                celda.colSpan = 8;
+                fila.appendChild(celda);
+                cuerpoTabla.appendChild(fila);
+            }
+        }
+
+        function mostrarTodosEstudiantes() {
+            const cuerpoTabla = document.getElementById('academico-body');
+            cuerpoTabla.innerHTML = '';
+
+            for (let i = 0; i < academico.length; i++) {
+                const fila = document.createElement('tr');
+                academico[i].forEach(dato => {
+                    const celda = document.createElement('td');
+                    celda.textContent = dato;
+                    fila.appendChild(celda);
+                });
+                cuerpoTabla.appendChild(fila);
+            }
+        }
+    </script>
+</body>
+</html>
