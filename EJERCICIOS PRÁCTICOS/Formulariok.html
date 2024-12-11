@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo de Consulta Académica</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
+   
+</head>
+<body>
+    <h1>Módulo de Consulta Académica</h1>
+    <form id="form">
+        <label for="studentId">ID del estudiante:</label>
+        <input type="text" id="studentId" onfocus="handleFocus(this)" onblur="handleBlur(this)">
+        
+        <label for="studentName">Nombre del estudiante:</label>
+        <input type="text" id="studentName" onfocus="handleFocus(this)" onblur="handleBlur(this)">
+        
+        <label for="studentProgram">Programa del estudiante:</label>
+        <input type="text" id="studentProgram" onfocus="handleFocus(this)" onblur="handleBlur(this)">
+        
+        <button type="button" onclick="validar()">Buscar</button>
+    </form>
+
+    <div id="resultado"></div>
+
+    <script>
+        
+        function validar() {
+            var studentId = document.getElementById("studentId");
+            var studentName = document.getElementById("studentName");
+            var studentProgram = document.getElementById("studentProgram");
+
+           
+            studentId.classList.remove("error-border");
+            studentName.classList.remove("error-border");
+            studentProgram.classList.remove("error-border");
+
+            if (studentId.value == null || studentId.value == "") {
+                studentId.classList.add("error-border");
+                Swal.fire({
+                    icon: "error",
+                    title: "Campo vacío",
+                    text: "ID del estudiante es obligatorio!",
+                });
+                return false;
+
+            } else if (studentName.value == null || studentName.value == "") {
+                studentName.classList.add("error-border");
+                Swal.fire({
+                    icon: "error",
+                    title: "Campo vacío",
+                    text: "Nombre del estudiante es obligatorio!",
+                });
+                return false;
+
+            } else if (studentProgram.value == null || studentProgram.value == "") {
+                studentProgram.classList.add("error-border");
+                Swal.fire({
+                    icon: "error",
+                    title: "Campo vacío",
+                    text: "Programa del estudiante es obligatorio!",
+                });
+                return false;
+
+            } else {
+                consultarEstudiante();
+            }
+        }
+
+        const academico = [
+            ["51662369", "Sandra Milena Castellanos Marín", "Medicina", "VI", "3.5", "4.0", "3.3", "3.5"],
+            ["80223220", "Luis Andrés Montoya Montoya", "Ingeniería de Telecomunicaciones", "IV", "3.0", "3.3", "4.2", "4.5"],
+            ["79444555", "Francisco Martínez Marin", "Ingeniería de Alimentos", "III", "3.4", "4.5", "4.4", "3.0"],
+            ["79001003","Luis Francisco Castañeda Roa","Ingeniería de Sistemas","VIII","3.3","3.4","4.5","4.4"],
+            ["79003003","Pedro José Pineda Pineda","Odontología","VI","4.0","4.1","3.9","4.5"],
+            ["52900901","Ruth Paola Mahecha Mahecha","Odontología","VII","3.6","3.6","3.8","3.9"],
+            ["26900345","Lucia Valderrama Pineda","Fisioterapia","VIII","4.4","4.5","4.1","3.1"],
+            ["35676900","Mariela Lucia Olguín Ramírez","Medicina","V","3.0","3.1","4.6","3.7"],
+            ["27101234","Lucila Peñaranda Peñaranda","Enfermería","II","2.5","4.6","3.4","4.6"],
+            ["80231678","Milena Palacios Palacios","Ingeniería Mecánica","III","3.6","3.4","3.5","4.5"],
+            ["1030617979","Luis Alberto Castellanos Frias","Odontología","VI","4.0","4.1","3.9","4.5"],
+            ["1019066342","Nercy Aleidis Rengifo Rengifo","Fisioterapia","VII","3.6","3.6","3.8","3.9"],
+            ["1014249436","Fabián Raúl Moreno Carvajal","Medicina","VIII","4.4","4.5","4.1","3.1"],
+            ["1022380843","Jonathan Mauricio Baez Baez","Enfermería","V","3.0","3.1","4.6","3.7"],
+            ["1012353083","Germán Dario Rodríguez Baez","Ingeniería Mecánica","II","2.5","4.6","3.4","4.6"],
+            ["1030630231","Diego Fernando Giraldo Romero","Ingeniería de Petróleo","III","3.6","3.4","3.5","4.5"],
+            ["1020765332","Luz Herminda Fonseca Daza","Psicología","VI","4.0","4.1","3.9","4.5"],
+            ["1022357137","Rhonald Dahian Jiménez García","Ingeniería Civil","VI","3.5","4.0","3.3","3.5"],
+            ["52263227","Edgar Andrés Bejarano Pérez","Ingeniería Civil","IV","3.0","3.3","4.2","4.5"],
+            ["1013579638","Diego Fernando Bautista Gómez","Ingeniería Civil","III","3.4","4.5","4.4","3.0"],
+            ["1030617979","Luis Alberto Jaime Hernández","Ingeniería de Sistemas","II","4.0","4.1","3.9","4.5"],
+            ["1019066342","Zabala Pereira Nercy Aleidys","Ingeniería Mecánica","V","3.0","3.3","4.2","4.5"],
+            ["1014249436","Fabian Raul Duarte Serrano","Medicina","IV","3.6","3.6","3.8","3.9"],
+            ["1022380843","Jhonatan Mauricio Rodríguez C.","Ingeniería de Petróleos","I","3.4","4.5","4.4","3.0"],
+            ["1012353083","German Dario González Riaño","Ingeniería de Petróleos","III","3.4","4.5","4.4","3.0"],
+            ["96040605441","Michael Duvan Beltran Salcedo","Medicina","IV","3.0","3.3","4.2","4.5"],
+            ["1013641467","Romero Piña Dylan David","Fisioterapia","II","3.6","3.6","3.8","3.9"],
+            ["1030632107","Ruben Dario Fuquene C.","Ingeniería Mecánica","V","3.0","3.3","4.2","4.5"],
+            ["53072770","Maryory Cuesta Rodríguez","Ingeniería de Telecomunicaciones","IV","3.0","3.3","4.2","4.5"],
+            ["1014245401","Cristian Camilo Ortiz Ortiz","Ingeniería de Telecomunicaciones","VI","2.0","3.1","4.8","1.5"],
+            ["95070115361","Yuly Katherine Sierra","Ingeniería Mecánica","V","2.7","3.9","4.7","4.5"],
+            ["1020796896","Daniel Andres Zapata Bello","Ingeniería Mecánica","IV","3.0","3.3","4.2","4.5"],
+            ["1003819124","José Eitner Montiel Aldana","Medicina","IV","3.0","3.3","4.2","4.5"],
+            ["1031131906","Luis Guillermo Andrade Cifuentes","Medicina","VIII","3.9","3.8","2.6","4.5"],
+            ["1019018284","Jairo Joel Noguera Melo","Medicina","VIII","3.7","3.7","4.7","4.0"],
+            ["1014218719","Bryan Andrés Ortegón","Medicina","IV","3.0","3.3","4.2","4.5"],
+            ["1030611565","Mónica Andrea Plaza Bernal","Medicina","IV","3.6","3.8","4.8","4.0"]
+];
+
+        
+        function calcularPromedio(calificaciones) {
+            const suma = calificaciones.reduce((acc, curr) => acc + parseFloat(curr), 0);
+            return (suma / calificaciones.length).toFixed(1);
+        }
+
+        
+        function promedioEnPalabras(promedio) {
+            if (promedio >= 4.5) return "Sobresaliente";
+            if (promedio >= 3.5) return "Bueno";
+            if (promedio >= 2.5) return "Aceptable";
+            return "Insuficiente";
+        }
+
+        
+        function consultarEstudiante() {
+            const studentId = document.getElementById('studentId').value;
+            const estudiante = academico.find(e => e[0] === studentId);
+
+            const resultadoDiv = document.getElementById('resultado');
+            resultadoDiv.innerHTML = '';
+
+            if (estudiante) {
+                const calificaciones = estudiante.slice(4); 
+                const promedio = calcularPromedio(calificaciones);
+                const promedioPalabras = promedioEnPalabras(promedio);
+
+                resultadoDiv.innerHTML = `
+                    <p><strong>Identificación:</strong> ${estudiante[0]}</p>
+                    <p><strong>Nombre:</strong> ${estudiante[1]}</p>
+                    <p><strong>Programa:</strong> ${estudiante[2]}</p>
+                    <p><strong>Semestre:</strong> ${estudiante[3]}</p>
+                    <p><strong>Calificaciones:</strong> ${calificaciones.join(', ')}</p>
+                    <p><strong>Promedio General:</strong> ${promedio}</p>
+                    <p><strong>Descripción del Promedio:</strong> ${promedioPalabras}</p>
+                `;
+            } else {
+                resultadoDiv.innerHTML = '<center><p class="error">Estudiante no encontrado.</center></p>';
+            }
+        }
+
+       
+        function handleFocus(element) {
+            element.classList.remove('error-border');
+        }
+
+        
+        function handleBlur(element) {
+            if (element.value === "") {
+                element.classList.add('error-border');
+            } else {
+                element.classList.remove('error-border');
+            }
+        }
+    </script>
+</body>
+</html>

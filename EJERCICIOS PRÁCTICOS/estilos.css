@@ -1,85 +1,79 @@
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    min-height: 100vh; /* Altura mínima de la ventana */
-    display: flex; /* Flexbox para centrar */
-    align-items: center; /* Alinear verticalmente */
-    justify-content: center; /* Alinear horizontalmente */
-    background-color: #f0f2f5; /* Fondo claro */
-}
+.focus {
+            border-color: blue;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f9;
+            margin: 0;
+            padding: 0;
+        }
 
-form {
-    padding: 50px 55px; /* Espaciado interno */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Sombra */
-    border-radius: 0px; /* Bordes sin redondear */
-    text-align: center; /* Centrar texto */
-    width: 340px; /* Ancho del formulario */
-    background-color: #ffffff; /* Fondo blanco */
-}
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: #2c3e50;
+        }
 
-.input-group {
-    display: flex; /* Usar flexbox */
-    flex-direction: column; /* Columna */
-    text-align: left; /* Texto a la izquierda */
-}
+        form {
+            max-width: 400px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
 
-h1 {
-    color: #283629; /* Color del título */
-    font-size: 24px; /* Tamaño del título */
-    font-weight: 600; /* Peso de la fuente */
-    margin-bottom: 20px; /* Espaciado inferior */
-}
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #34495e;
+        }
 
-label {
-    font-size: 14px; /* Tamaño de la fuente para etiquetas */
-    color: #555; /* Color de las etiquetas */
-    margin-bottom: 8px; /* Espaciado inferior */
-}
+        input[type="text"] {
+            width: 95%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
 
-input[type="text"],
-input[type="number"] {
-    padding: 17px 25px; /* Relleno interno */
-    border-radius: 25px; /* Bordes redondeados */
-    margin-bottom: 20px; /* Espaciado inferior */
-    background-color: #EDFFF0; /* Fondo suave */
-    border: 2px solid #F0FAF1; /* Borde */
-    color: #283629; /* Color del texto */
-}
+        input[type="text"].focus {
+            border-color: #3498db;
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+        }
 
-input::placeholder {
-    color: #b5cab6; /* Color del texto de marcador de posición */
-}
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
 
-.btn {
-    font-size: 16px; /* Tamaño de la fuente */
-    color: #FFFF; /* Color del texto */
-    border: 0; /* Sin borde */
-    border-radius: 25px; /* Bordes redondeados */
-    background-color: #489c45; /* Color de fondo */
-    padding: 10px; /* Espaciado interno */
-    cursor: pointer; /* Cambiar cursor a puntero */
-}
+        button:hover {
+            background-color: #2980b9;
+        }
 
-.btn:hover {
-    background-color: #50E04B; /* Color de fondo al pasar el ratón */
-}
+        #resultado {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ecf0f1;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
 
-#resultado {
-    margin-top: 20px; /* Espaciado superior */
-    font-weight: bold; /* Negrita */
-    color: #000000; /* Color azul para el resultado */
-}
+        #resultado p {
+            margin: 5px 0;
+            font-size: 16px;
+            color: #2c3e50;
+        }
 
-@media (max-width: 991px) {
-    body {
-        padding: 30px; /* Espaciado interno en pantallas pequeñas */
-    }
-
-    form {
-        padding: 50px 30px; /* Ajustar espaciado interno */
-        width: 100%; /* Ancho completo */
-    }
-
-    input {
-        padding: 15px; /* Relleno interno para entradas */
-    }
-}
+        .error {
+            color: red;
+        }
