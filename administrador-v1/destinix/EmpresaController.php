@@ -1,0 +1,34 @@
+<?php
+header('Content-Type: application/json');
+header('Access-Control-Allow-Origin: *');
+
+// Conexión a la base de datos
+$host = 'localhost';
+$user = 'root';
+$password = '';
+$dbname = 'destinix';
+
+$conn = new mysqli($host, $user, $password, $dbname);
+
+if ($conn->connect_error) {
+    die("Conexión fallida: " . $conn->connect_error);
+}
+
+// Consulta para obtener ID y nombre de la empresa
+$sql = "SELECT id_empresa, nombre_emp AS nombre_empresa FROM empresa";
+
+$result = $conn->query($sql);
+
+$empresas = [];
+
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        $empresas[] = $row;
+    }
+}
+
+$conn->close();
+
+// Devolver el resultado como JSON
+echo json_encode($empresas);
+?>
