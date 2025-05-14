@@ -1,0 +1,75 @@
+.barra-lateral {
+  width: 220px;
+  height: 100vh;
+  background-color: #1a1a2e;
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: white;
+  padding-top: 20px;
+  z-index: 100;
+  overflow-y: auto;
+}
+
+.menuList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+  margin-left: 10px;
+}
+
+.active {
+  background-color: #16213e;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.logoImg {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.profileLink {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+}
+
+.profileImage {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profileName {
+  display: block;
+  margin-top: 8px;
+  color: white;
+  font-weight: bold;
+}
+
+.logout {
+  background: none;
+  border: none;
+  color: white;
+  width: 100%;
+  text-align: left;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.logout:hover {
+  background-color: #0f3460;
+}
