@@ -1,0 +1,32 @@
+.calculadora-container {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.calculadora-input,
+.calculadora-select {
+  margin: 5px;
+  padding: 10px;
+  width: 80%;
+}
+
+.calculadora-button {
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.calculadora-button-green {
+  background-color: green;
+  color: white;
+}
+
+.calculadora-button-red {
+  background-color: red;
+  color: white;
+}
