@@ -1,0 +1,88 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f2f5;
+}
+
+.container {
+    text-align: center;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+}
+
+#status-message {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    font-weight: bold;
+    height: 1.5rem;
+    color: #34495e;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 8px;
+    margin: 1.5rem auto;
+    aspect-ratio: 1/1;
+    width: 100%;
+}
+
+.cell {
+    background-color: #ecf0f1;
+    border: 2px solid #bdc3c7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 5px;
+    aspect-ratio: 1/1;
+}
+
+.cell:hover {
+    background-color: #dfe6e9;
+}
+
+.cell.X {
+    color: #e74c3c;
+}
+
+.cell.O {
+    color: #3498db;
+}
+
+#reset-btn {
+    padding: 0.8rem 1.8rem;
+    font-size: 1rem;
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 1rem;
+}
+
+#reset-btn:hover {
+    background-color: #27ae60;
+}
+
+/* Efecto al hacer clic */
+.cell:active {
+    transform: scale(0.95);
+}
