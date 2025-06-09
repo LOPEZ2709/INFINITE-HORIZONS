@@ -1,0 +1,234 @@
+2025-04-22 03:27:37 - Método: DELETE
+DELETE Input: Array
+(
+    [id_itinerario] => 37
+)
+
+2025-04-22 03:27:43 - Método: DELETE
+DELETE Input: Array
+(
+    [id_itinerario] => 34
+)
+
+2025-04-22 03:28:02 - Método: DELETE
+DELETE Input: Array
+(
+    [id_itinerario] => 35
+)
+
+2025-04-22 03:28:02 - Método: DELETE
+DELETE Input: Array
+(
+    [id_itinerario] => 36
+)
+
+2025-04-22 03:28:40 - Método: POST
+POST Input: Array
+(
+    [persona_id_persona] => 1
+    [fecha_itinerario] => 2025-04-22
+    [descripcion] => Visita a Sushi House
+    [hora_inicio] => 08:00:00
+    [hora_fin] => 22:00:00
+    [estado_id_estado] => 1
+    [id_restaurante] => 5
+)
+
+Query: INSERT INTO itinerario (fecha_itinerario, persona_id_persona, descripcion, hora_inicio, hora_fin, estado_id_estado, id_restaurante) 
+                      VALUES (:fecha, :persona_id, :descripcion, :hora_inicio, :hora_fin, :estado_id, :restaurante_id)
+Params: Array
+(
+    [:fecha] => 2025-04-22
+    [:persona_id] => 1
+    [:descripcion] => Visita a Sushi House
+    [:hora_inicio] => 08:00:00
+    [:hora_fin] => 22:00:00
+    [:estado_id] => 1
+    [:restaurante_id] => 5
+)
+
+Nuevo item creado: Array
+(
+    [id_itinerario] => 38
+    [persona_id_persona] => 1
+    [id_sitio] => 
+    [id_hoteles] => 
+    [id_restaurante] => 5
+    [fecha_itinerario] => 2025-04-22
+    [hora_inicio] => 08:00:00
+    [hora_fin] => 22:00:00
+    [descripcion] => Visita a Sushi House
+    [estado_id_estado] => 1
+)
+
+2025-04-22 03:28:40 - Método: GET
+GET Params: Array
+(
+)
+
+Resultados GET: 11 registros
+2025-04-22 03:29:23 - Método: GET
+GET Params: Array
+(
+)
+
+Resultados GET: 11 registros
+2025-04-22 03:29:46 - Método: POST
+POST Input: Array
+(
+    [persona_id_persona] => 1
+    [fecha_itinerario] => 2025-04-22
+    [descripcion] => Visita a Click Clack Hotel
+    [hora_inicio] => 08:00:00
+    [hora_fin] => 10:00:00
+    [estado_id_estado] => 1
+    [id_hoteles] => 8
+)
+
+Query: INSERT INTO itinerario (fecha_itinerario, persona_id_persona, descripcion, hora_inicio, hora_fin, estado_id_estado, id_hoteles) 
+                      VALUES (:fecha, :persona_id, :descripcion, :hora_inicio, :hora_fin, :estado_id, :hotel_id)
+Params: Array
+(
+    [:fecha] => 2025-04-22
+    [:persona_id] => 1
+    [:descripcion] => Visita a Click Clack Hotel
+    [:hora_inicio] => 08:00:00
+    [:hora_fin] => 10:00:00
+    [:estado_id] => 1
+    [:hotel_id] => 8
+)
+
+Nuevo item creado: Array
+(
+    [id_itinerario] => 39
+    [persona_id_persona] => 1
+    [id_sitio] => 
+    [id_hoteles] => 8
+    [id_restaurante] => 
+    [fecha_itinerario] => 2025-04-22
+    [hora_inicio] => 08:00:00
+    [hora_fin] => 10:00:00
+    [descripcion] => Visita a Click Clack Hotel
+    [estado_id_estado] => 1
+)
+
+2025-04-22 03:29:47 - Método: GET
+GET Params: Array
+(
+)
+
+Resultados GET: 12 registros
+2025-04-22 03:30:29 - Método: POST
+POST Input: Array
+(
+    [persona_id_persona] => 1
+    [fecha_itinerario] => 2025-04-25
+    [descripcion] => Visita a Embajada Luxury Suites
+    [hora_inicio] => 10:00:00
+    [hora_fin] => 11:00:00
+    [estado_id_estado] => 1
+    [id_hoteles] => 11
+)
+
+Query: INSERT INTO itinerario (fecha_itinerario, persona_id_persona, descripcion, hora_inicio, hora_fin, estado_id_estado, id_hoteles) 
+                      VALUES (:fecha, :persona_id, :descripcion, :hora_inicio, :hora_fin, :estado_id, :hotel_id)
+Params: Array
+(
+    [:fecha] => 2025-04-25
+    [:persona_id] => 1
+    [:descripcion] => Visita a Embajada Luxury Suites
+    [:hora_inicio] => 10:00:00
+    [:hora_fin] => 11:00:00
+    [:estado_id] => 1
+    [:hotel_id] => 11
+)
+
+Nuevo item creado: Array
+(
+    [id_itinerario] => 40
+    [persona_id_persona] => 1
+    [id_sitio] => 
+    [id_hoteles] => 11
+    [id_restaurante] => 
+    [fecha_itinerario] => 2025-04-25
+    [hora_inicio] => 10:00:00
+    [hora_fin] => 11:00:00
+    [descripcion] => Visita a Embajada Luxury Suites
+    [estado_id_estado] => 1
+)
+
+2025-04-22 03:30:29 - Método: GET
+GET Params: Array
+(
+)
+
+Resultados GET: 13 registros
+2025-04-22 03:35:17 - Método: GET
+GET Params: Array
+(
+)
+
+Resultados GET: 13 registros
+2025-04-22 03:35:34 - Método: GET
+GET Params: Array
+(
+)
+
+Resultados GET: 13 registros
+2025-04-22 03:43:18 - Método: GET
+GET Params: Array
+(
+)
+
+Resultados GET: 13 registros
+2025-04-22 03:43:55 - Método: POST
+POST Input: Array
+(
+    [persona_id_persona] => 1
+    [fecha_itinerario] => 2025-04-23
+    [descripcion] => Visita a W Bogotá
+    [hora_inicio] => 08:00:00
+    [hora_fin] => 10:00:00
+    [estado_id_estado] => 1
+    [id_hoteles] => 9
+)
+
+Query: INSERT INTO itinerario (fecha_itinerario, persona_id_persona, descripcion, hora_inicio, hora_fin, estado_id_estado, id_hoteles) 
+                      VALUES (:fecha, :persona_id, :descripcion, :hora_inicio, :hora_fin, :estado_id, :hotel_id)
+Params: Array
+(
+    [:fecha] => 2025-04-23
+    [:persona_id] => 1
+    [:descripcion] => Visita a W Bogotá
+    [:hora_inicio] => 08:00:00
+    [:hora_fin] => 10:00:00
+    [:estado_id] => 1
+    [:hotel_id] => 9
+)
+
+Nuevo item creado: Array
+(
+    [id_itinerario] => 41
+    [persona_id_persona] => 1
+    [id_sitio] => 
+    [id_hoteles] => 9
+    [id_restaurante] => 
+    [fecha_itinerario] => 2025-04-23
+    [hora_inicio] => 08:00:00
+    [hora_fin] => 10:00:00
+    [descripcion] => Visita a W Bogotá
+    [estado_id_estado] => 1
+)
+
+2025-04-22 03:43:55 - Método: GET
+GET Params: Array
+(
+)
+
+Resultados GET: 14 registros
+2025-04-22 03:43:59 - Método: GET
+GET Params: Array
+(
+)
+
+Resultados GET: 14 registros

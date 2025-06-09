@@ -1,0 +1,11 @@
+2025-06-08 04:49:17 - Request: Array
+(
+    [persona_id] => 6
+)
+
+Exception: Tipo no válido. Use: hotel, restaurante o sitio
+2025-06-08 04:49:30 - Request: Array
+(
+)
+
+Exception: Tipo no válido. Use: hotel, restaurante o sitio
